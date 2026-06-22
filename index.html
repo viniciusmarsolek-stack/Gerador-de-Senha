@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <svg class="lock-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+        </svg>
+        <h1>Gerador de senhas</h1>
+        <h2>Gere instantaneamente uma senha aleatória e segura</h2>
+    </header>
+
+    <div class="password-display-container">
+        <span class="label-senha">Senha:</span>
+        <input type="text" id="password-output" class="password-input" readonly placeholder="Sua senha aparecerá aqui">
+    </div>
+
+    <div class="custom-panel">
+        <h3>Personalize sua senha</h3>
+        
+        <div class="panel-content">
+            <div class="control-section length-control">
+                <span class="control-title">Número de caracteres</span>
+                <div class="counter-container">
+                    <button id="btn-decrease" class="counter-btn">−</button>
+                    <span id="char-count" class="counter-value">12</span>
+                    <button id="btn-increase" class="counter-btn">+</button>
+                </div>
+            </div>
+
+            <div class="control-section options-control">
+                <span class="control-title">Características da senha</span>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-uppercase" checked> Letras maiúsculas
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-lowercase" checked> Letras minúsculas
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-numbers" checked> Números
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="chk-symbols" checked> Símbolos
+                </label>
+            </div>
+
+            <div class="control-section strength-control">
+                <span class="control-title">Força da senha</span>
+                <div id="strength-indicator" class="strength-box strength-strong">Forte</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="btn-generate" style="background-color: yellow; color: blue; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 16px;">Gerar Nova Senha</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
